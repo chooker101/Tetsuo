@@ -1,0 +1,8 @@
+function(vs_source_group root_dir source_list)
+    foreach(source IN ITEMS ${source_list})
+        get_filename_component(source_path "${source}" PATH)
+        file(RELATIVE_PATH rel_path "${root_dir}" "${source_path}")
+        string(REPLACE "/" "\\" source_group_path "${rel_path}")
+        source_group("${source_group_path}" FILES "${source}")
+    endforeach()
+endfunction(vs_source_group)
