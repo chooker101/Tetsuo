@@ -5,10 +5,10 @@ tet::UdpServerLayout::UdpServerLayout(asio::io_context * context, uint16_t port)
 {
 }
 
-tet::UdpServerLayout::UdpServerLayout(asio::io_context * context, IpStandardFlag ipStandard, uint16_t port) : mIOContext(context), mPort(port), mIpFlag(ipStandard)
+tet::UdpServerLayout::UdpServerLayout(asio::io_context * context, IpStandard ipStandard, uint16_t port) : mIOContext(context), mPort(port), mIpFlag(ipStandard)
 {
 }
 
-tet::UdpServerLayout::UdpServerLayout(asio::io_context * context, IpStandardFlag ipStandard, uint16_t port, uint32_t maxDataLength) : mIOContext(context), mPort(port), mIpFlag(ipStandard), mMaxDataLength(maxDataLength)
+tet::UdpServerLayout::UdpServerLayout(asio::io_context * context, IpStandard ipStandard, uint16_t port, uint32_t maxDataLength) : mIOContext(context), mPort(port), mIpFlag(ipStandard), mMaxDataLength(maxDataLength)
 {
 }
