@@ -16,9 +16,7 @@ namespace tet
 		uint16_t mPort = 80;
 		uint32_t mMaxDataLength = 1024;
 	public:
-		UdpServerLayout(asio::io_context* context, uint16_t port);
-		UdpServerLayout(asio::io_context* context, IpStandard ipStandard, uint16_t port);
-		UdpServerLayout(asio::io_context* context, IpStandard ipStandard, uint16_t port, uint32_t maxDataLength);
+		UdpServerLayout(asio::io_context* context, IpStandard ipStandard = IpStandard::IPV4, uint16_t port = 80, uint32_t maxDataLength = 1024);
 
 		const asio::io_context* GetIOContext() const { return mIOContext; }
 		asio::io_context* GetIOContext() { return mIOContext; }
